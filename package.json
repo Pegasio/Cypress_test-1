@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "cypress": "^13.6.3"
-  },
-  
-  "scripts": {
-    "cypress:open": "cypress open"
-  }
-}
