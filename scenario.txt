@@ -1,0 +1,101 @@
+Тест 1: Войти и выйти
+- Открыть сайт(https://www.globalsqa.com/angularJs-protractor/BankingProject)
+- Нажать на кнопку "Customer Login"
+- В поле выбора, нажать на "Hermoine Granger"
+- Нажать на кнопку "Login"
+- Нажать на кнопку "Logout"
+
+Тест 2: Войти, сделать депозит, проверить транзакции
+- Открыть сайт(https://www.globalsqa.com/angularJs-protractor/BankingProject)
+- Нажать на кнопку "Customer Login"
+- В поле выбора, нажать на "Harry Potter"
+- Нажать на кнопку "Login"
+- Нажать на кнопку "Deposit"
+- В поле ввода, прописать значение "8800"
+- Нажать на маленькую кнопку "Deposit"
+Ожидаемый результат: появление сообщения  "Deposit Successful"
+- Нажать на кнопку "Transactions"
+Ожидаемый результат: появление строки с депозитом, со значением "8800" и логином "Harry Potter"
+
+Тест 3: Обналичичивание без депозита
+- Открыть сайт(https://www.globalsqa.com/angularJs-protractor/BankingProject)
+- Нажать на кнопку "Customer Login"
+- В поле выбора, нажать на "Ron Weasly"
+- Нажать на кнопку "Login"
+- Нажать на кнопку "Withdrawl"
+- В поле ввода, прописать значение "8800"
+- Нажать на маленькую кнопку "Withdraw"
+Ожидаемый результат: появление сообщения  "Transaction Failed. You can not withdraw amount more than the balance."
+
+Тест 4: Баланс больше чем обналичивание
+- Открыть сайт(https://www.globalsqa.com/angularJs-protractor/BankingProject)
+- Нажать на кнопку "Customer Login"
+- В поле выбора, нажать на "Albus Dumbledore"
+- Нажать на кнопку "Login"
+- Нажать на кнопку "Deposit"
+- В поле ввода, прописать значение "8801"
+- Нажать на маленькую кнопку "Deposit"
+- Должно появиться сообщение "Deposit Successful"
+- Нажать на кнопку "Withdrawl"
+- В поле ввода, прописать значение "8800"
+- Нажать на маленькую кнопку "Withdraw"
+Ожидаемый результат: появление сообщения "Transaction successful"
+
+Тест 5: Обналичивание больше баланса с депозитом
+- Открыть сайт(https://www.globalsqa.com/angularJs-protractor/BankingProject)
+- Нажать на кнопку "Customer Login"
+- В поле выбора, нажать на "Neville Longbottom"
+- Нажать на кнопку "Login"
+- Нажать на кнопку "Deposit"
+- В поле ввода, прописать значение "8801"
+- Нажать на маленькую кнопку "Deposit"
+- Должно появиться сообщение "Deposit Successful"
+- Нажать на кнопку "Withdrawl"
+- В поле ввода, прописать значение "1231231"
+- Нажать на маленькую кнопку "Withdraw"
+Ожидаемый результат: появление сообщения "Transaction successful"
+
+Тест 6: Создание, открытие и удаление аккаунта для кастомера
+- Открыть сайт(https://www.globalsqa.com/angularJs-protractor/BankingProject)
+- Нажать на кнопку "Bank Manager Login"
+- Нажать на кнопку сверху - "Add Customer"
+- В поле ввода(First Name), прописать "First"
+- В поле ввода(Last Name), прописать "Last"
+- В поле ввода(Post Code), прописать "E28228"
+- Нажать на маленькую кнопку снизу - "Add Customer"
+- Нажать на кнопку сверху - "Open Account"
+- В поле выбора(Customer Name), нажать на "First Last"
+- В поле выбора(Currency), нажать на "Dollar"
+- Нажать на маленькую кнопку снизу - "Process"
+- Нажать на кнопку сверху - "Customers"
+- В поле ввода(Search Customer), написать "First"
+- Нажать на кнопку "Delete" у появившейся строки со значением у First Name: First
+Ожидаемый результат: строка удалилась
+
+Тест 7: Всё везде и сразу
+- Открыть сайт(https://www.globalsqa.com/angularJs-protractor/BankingProject)
+- Нажать на кнопку "Bank Manager Login"
+- Нажать на кнопку сверху - "Add Customer"
+- В поле ввода(First Name), прописать "First"
+- В поле ввода(Last Name), прописать "Last"
+- В поле ввода(Post Code), прописать "E28228"
+- Нажать на маленькую кнопку снизу - "Add Customer"
+- Нажать на кнопку сверху - "Open Account"
+- В поле выбора(Customer Name), нажать на "First Last"
+- В поле выбора(Currency), нажать на "Dollar"
+- Нажать на маленькую кнопку снизу - "Process"
+- Нажать на кнопку сверху - "Customers"
+- Нажать на кнопку - "Home"
+- Нажать на кнопку "Customer Login"
+- В поле выбора, нажать на "First Last"
+- Нажать на кнопку "Login"
+- Нажать на кнопку "Deposit"
+- В поле ввода, прописать значение "8800"
+- Нажать на маленькую кнопку "Deposit"
+Ожидаемый результат: появление сообщения "Deposit Successful"
+- Нажать на кнопку "Transactions"
+- Нажать на кнопку - "Back"
+- Нажать на кнопку "Withdrawl"
+- В поле ввода, прописать значение "8800"
+- Нажать на маленькую кнопку "Withdraw"
+Ожидаемый результат: появление сообщения "Transaction successful"
